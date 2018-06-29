@@ -1,0 +1,26 @@
+1、ping 一个网址 可以查看他的ip地址
+2、ping IP地址 -l 数据包大小（最大是：65000） -t    如：ping 192.168.1.1 -l  -t   可以用这个数据包不停地攻击 Ctrl+c停止攻击
+3、tracert 网址或IP     可以查看经过的路径，即每一次的中转在哪里，经过了多长时间.
+4、netstat -r 显示本机的路由信息.
+5、netstat -s 显示每个协议的使用状态.
+6、netstat -n 是以表格形式显示IP地址和端口
+7、netstat -a 显示所有主机的端口号
+8、net user \\ip地址\IPC$ 密码（没有就是""） /user:管理员名字（默认是administrator） 作用是：和这个电脑建立IPC连接，可以复制文件，启动服务等
+9、把C盘映射到本地：    net use x: \\ip地址\c$       x是要映射到本地盘的名字
+10、net user 用户名 密码 /add 添加一个新用户
+    net localgroup administrators 用户名 /add  给他管理员权限
+11、net user 用户名 新密码      改密码
+12、net start 服务名称       开启服务
+    net start 服务名称      停用服务
+13、net share 显示的是本地的共享资源
+    net share 共享名（配合着上面的口令用，就是第一个字符比如：d$） /del       删除共享
+    上面的命令不加/del  是打开共享
+14、start 路径  打开新文件，以窗口的形式
+15、cd e:  进入盘符
+16、cd  路径\文件名字   进入当前文件路径
+17、 cls 清空控制台
+18、 ls 查看当前文件夹里面的文件有哪些
+19、ipconfig 查看IP具体信息
+20、mkdir .a 添加文件夹
+21、echo '' >> .aa   输出一个空字符到文件.aa中，也就是创建了一个文件
+在link中是：touch .aa   直接创建一个文件

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="模仿JQ选择器.js"></script>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="a" id="b"></div>
+</body>
+</html>
+<!--<script>-->
+    <!--window.onload=function(){-->
+        <!--function $(str){-->
+            <!--var str1=str.charAt(0);//返回首字母的位置-->
+            <!--if(str1=="#"){-->
+                <!--return document.getElementById(str.slice(1));//从第二个位置开始截取-->
+            <!--}-->
+            <!--if(str1=="."){-->
+                <!--return document.getElementsByClassName(str.slice(1));-->
+            <!--}else{-->
+                <!--return document.getElementsByTagName(str);-->
+            <!--}-->
+        <!--}-->
+<!--//            function $(str){-->
+<!--//                return document.getElementById(str);-->
+<!--//            }-->
+
+        <!--$("#b").style.backgroundColor="green";-->
+    <!--}-->
+<!--</script>-->
