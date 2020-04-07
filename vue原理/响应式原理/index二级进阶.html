@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <script src="./compile.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div>{{a}}</div>
+        <div>
+            <p>{{a}}</p>
+        </div>
+        <div v-html='a'></div>
+        <!-- 注意：v-model 是一个语法糖  它是由input时间  和input的 value组成的-->
+        <input type="text" v-model='a'>
+        <button @click='change'>{{a}}</button>
+    </div>
+</body>
+<script>
+    let vue = new Vue({
+        el:'#app',
+        data:{
+            a:10,
+            b:{
+                bb:30
+            }
+        },
+        methods: {
+            change(){
+                alert(111)
+                this.a = '改变了'
+            }
+        },
+        created() {
+            setTimeout(()=>{
+                this.a = '改变了'
+            },1000)
+        },
+    })
+    // vue.$data.a = 20
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>definePropety</title>
+</head>
+<body>
+    <div class="app">
+        <p class="text"><div class="app">
+            <p class="text"><div class="app">
+                <p class="text"><div class="app">
+                    <p class="text"></p>
+                </div></p>
+            </div></p>
+        </div></p>
+    </div>
+</body>
+<script>
+    let obj = {
+
+    }
+    Object.defineProperty(obj,'name',{
+        // 设置的时候不需要有返回
+        set:function(val){
+             document.querySelector('.text').innerHTML = val
+        },
+        // 获取的时候有return返回
+        get:function(val){
+            return document.querySelector('.text').innerHTML
+        }
+    })
+    obj.name = '1000元'
+</script>
+</html>
